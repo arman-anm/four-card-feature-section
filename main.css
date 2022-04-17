@@ -7,9 +7,9 @@
 :root {
   font-size: 10px;  /* Making root font size 10px would make it easier to style  */
   --ff: 'Poppins', sans-serif;
-  --fs-body: 1.5rem;
-  --fs-h1: 2.4rem;
-  --fs-h2: 2rem;
+  --fs-body: clamp(1rem, 5vw, 2rem);
+  --fs-h2: clamp(2rem, 5vw, 2.4rem);
+  --fs-h1: clamp(2.4rem, 5vw, 3.6rem);
   --fw-thin: 200;
   --fw-normal: 400;
   --fw-bold: 600; 
@@ -20,9 +20,10 @@
   --veryDarkBlue: hsl(234, 12%, 34%);
   --grayishBlue: hsl(229, 6%, 66%);
   --veryLightGray: hsl(0, 0%, 98%);
-  --padding-default: 30px;
-  --margin-default: 25px;
+  --padding-default: clamp(10px, 5vw, 30px);
+  --margin-default: clamp(10px, 5vw, 25px) ;
 }
+
 
 body {
   font-family: var(--ff);
@@ -50,16 +51,21 @@ h2 {
 }
 
 
-
-img {
-  margin-top: var(--margin-default);
-  display: block;
-  margin-right: 0;
-  margin-left: auto;
+header {
+  text-align: center;
 }
+
 
 header .thinHeaderText {
   font-weight: var(--fw-thin);
+}
+
+header p {
+  margin-top: var(--margin-default);
+}
+
+.cards {
+  margin-top: calc(var(--margin-default) * 3);
 }
 
 .card {
@@ -84,4 +90,10 @@ header .thinHeaderText {
   border-top: 5px solid var(--blue);
 }
 
-
+.card img {
+  margin-top: var(--margin-default);
+  display: block;
+  margin-right: 0;
+  margin-left: auto;
+  width: min(15vw, 65px);
+}
