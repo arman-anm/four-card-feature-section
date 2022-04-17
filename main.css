@@ -1,0 +1,87 @@
+/* External Resourses */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap');
+/* font-family: 'Poppins', sans-serif; */
+
+/* Root Files & Variables */
+
+:root {
+  font-size: 10px;  /* Making root font size 10px would make it easier to style  */
+  --ff: 'Poppins', sans-serif;
+  --fs-body: 1.5rem;
+  --fs-h1: 2.4rem;
+  --fs-h2: 2rem;
+  --fw-thin: 200;
+  --fw-normal: 400;
+  --fw-bold: 600; 
+  --red: hsl(0, 78%, 62%);
+  --cyan: hsl(180, 62%, 55%);
+  --orange: hsl(34, 97%, 64%);
+  --blue: hsl(212, 86%, 64%);
+  --veryDarkBlue: hsl(234, 12%, 34%);
+  --grayishBlue: hsl(229, 6%, 66%);
+  --veryLightGray: hsl(0, 0%, 98%);
+  --padding-default: 30px;
+  --margin-default: 25px;
+}
+
+body {
+  font-family: var(--ff);
+  padding: var(--padding-default);
+  background-color: var(--veryLightGray);
+}
+
+p {
+  font-size: var(--fs-body);
+  font-weight: var(--fw-normal);
+  color: var(--grayishBlue);
+  margin-top: calc(var(--margin-default) * .5);
+}
+
+h1 {
+  font-size: var(--fs-h1);
+  font-weight: var(--fw-bold);
+  color: var(--veryDarkBlue);
+}
+
+h2 {
+  font-size: var(--fs-h2);
+  font-weight: var(--fw-bold);
+  color: var(--veryDarkBlue);
+}
+
+
+
+img {
+  margin-top: var(--margin-default);
+  display: block;
+  margin-right: 0;
+  margin-left: auto;
+}
+
+header .thinHeaderText {
+  font-weight: var(--fw-thin);
+}
+
+.card {
+  padding: var(--padding-default);
+  margin-top: var(--margin-default);
+  border-radius: 5px;
+}
+
+.card:nth-child(1) {
+  border-top: 5px solid var(--cyan);
+}
+
+.card:nth-child(2) {
+  border-top: 5px solid var(--red);
+}
+
+.card:nth-child(3) {
+  border-top: 5px solid var(--orange);
+}
+
+.card:nth-child(4) {
+  border-top: 5px solid var(--blue);
+}
+
+
