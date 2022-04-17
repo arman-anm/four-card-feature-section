@@ -7,7 +7,7 @@
 :root {
   font-size: 10px;  /* Making root font size 10px would make it easier to style  */
   --ff: 'Poppins', sans-serif;
-  --fs-body: clamp(1rem, 5vw, 2rem);
+  --fs-body: clamp(1rem, 1.5rem, 2rem);
   --fs-h2: clamp(2rem, 5vw, 2.4rem);
   --fs-h1: clamp(2.4rem, 5vw, 3.6rem);
   --fw-thin: 200;
@@ -21,7 +21,7 @@
   --grayishBlue: hsl(229, 6%, 66%);
   --veryLightGray: hsl(0, 0%, 98%);
   --padding-default: clamp(10px, 5vw, 30px);
-  --margin-default: clamp(10px, 5vw, 25px) ;
+  --margin-default: clamp(10px, 5vw, 30px) ;
 }
 
 
@@ -65,28 +65,29 @@ header p {
 }
 
 .cards {
-  margin-top: calc(var(--margin-default) * 3);
+  margin-top: calc(var(--margin-default) * 1);
 }
 
 .card {
   padding: var(--padding-default);
-  margin-top: var(--margin-default);
+  margin: var(--margin-default);
   border-radius: 5px;
+  box-shadow: 0 0 15px var(--grayishBlue);
 }
 
-.card:nth-child(1) {
+.supervisor {
   border-top: 5px solid var(--cyan);
 }
 
-.card:nth-child(2) {
+.teamBuilder {
   border-top: 5px solid var(--red);
 }
 
-.card:nth-child(3) {
+.karma {
   border-top: 5px solid var(--orange);
 }
 
-.card:nth-child(4) {
+.calculator {
   border-top: 5px solid var(--blue);
 }
 
@@ -96,4 +97,40 @@ header p {
   margin-right: 0;
   margin-left: auto;
   width: min(15vw, 65px);
+}
+
+footer {
+  margin-top: var(--margin-default);
+}
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+@media only screen and (min-width: 960px) {
+
+  body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+  }
+  .cards {
+    display: flex;
+    justify-content: center ;
+    align-items: center;
+  }
+
+  .teamBuilder {
+    margin-bottom: calc(var(--margin-default) * 2);
+  }
+
+  .karma {
+    margin-top: calc(var(--margin-default) * 2);
+  }
+
+  .card {
+    width: min( 25vw, 350px );
+  }
 }
