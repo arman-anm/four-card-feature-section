@@ -100,7 +100,8 @@ header p {
 }
 
 footer {
-  margin-top: var(--margin-default);
+  margin-top: calc(var(--margin-default) * 2);
+  text-align: center;
 }
 
 .attribution { font-size: 11px; text-align: center; }
